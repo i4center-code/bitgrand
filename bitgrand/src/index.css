@@ -45,6 +45,35 @@ body {
   direction: rtl;
 }
 
+/* Light theme */
+[data-theme="light"] body {
+  background: linear-gradient(135deg, #f5f0e8 0%, #fff8f0 50%, #f5f0e8 100%);
+  color: #1a0f05;
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(255, 69, 0, 0.15);
+}
+
+[data-theme="light"] .text-white {
+  color: #1a0f05 !important;
+}
+
+[data-theme="light"] .text-white\/80,
+[data-theme="light"] .text-white\/60,
+[data-theme="light"] .text-white\/40 {
+  color: rgba(26, 15, 5, 0.8) !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
