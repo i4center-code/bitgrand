@@ -4,48 +4,45 @@ export const toPersianNum = (num: number | string): string => {
   return String(num).replace(/\d/g, (digit) => persianDigits[parseInt(digit)]);
 };
 
-// Navigation links
+// Navigation links with keys for i18n
 export const navLinks = [
-  { label: 'خانه', href: '#home' },
-  { label: 'خدمات', href: '#services' },
-  { label: 'شبکه جهانی', href: '#network' },
-  { label: 'چرا ما', href: '#why-us' },
-  { label: 'نظرات', href: '#testimonials' },
-  { label: 'سوالات متداول', href: '#faq' },
-  { label: 'تماس', href: '#contact' },
+  { key: 'home', href: '#home' },
+  { key: 'services', href: '#services' },
+  { key: 'about', href: '#about' },
+  { key: 'contact', href: '#contact' },
 ];
 
 // Services data
 export const services = [
   {
     icon: 'Bitcoin',
-    title: 'معاملات OTC ارز دیجیتال',
-    desc: 'خرید و فروش بدون محدودیت در مبلغ با بهترین نرخ بازار',
+    titleKey: 'services.otcTitle',
+    descKey: 'services.otcDesc',
   },
   {
     icon: 'Send',
-    title: 'انتقال پول بین‌المللی',
-    desc: 'حواله ارزی سریع و امن به سراسر جهان',
+    titleKey: 'services.transferTitle',
+    descKey: 'services.transferDesc',
   },
   {
     icon: 'Globe',
-    title: 'خدمات SWIFT',
-    desc: 'انتقال وجه بانکی از طریق شبکه سوئیفت',
+    titleKey: 'services.swiftTitle',
+    descKey: 'services.swiftDesc',
   },
   {
     icon: 'UserCheck',
-    title: 'احراز هویت بایننس',
-    desc: 'انجام KYC برای صرافی بایننس و سایر پلتفرم‌ها',
+    titleKey: 'services.kycTitle',
+    descKey: 'services.kycDesc',
   },
   {
     icon: 'Image',
-    title: 'مشاوره NFT',
-    desc: 'راهنمایی تخصصی برای سرمایه‌گذاری در NFT',
+    titleKey: 'services.nftTitle',
+    descKey: 'services.nftDesc',
   },
   {
     icon: 'MessageSquare',
-    title: 'مشاوره سرمایه‌گذاری',
-    desc: 'مشاوره حرفه‌ای برای سرمایه‌گذاری در کریپتو',
+    titleKey: 'services.consultationTitle',
+    descKey: 'services.consultationDesc',
   },
 ];
 
@@ -55,20 +52,20 @@ export const countries = ['امارات', 'ترکیه', 'اسپانیا', 'چی�
 // Why Us section
 export const whyUs = [
   {
-    title: 'سرعت بالا',
-    desc: 'انجام تراکنش‌ها در کمترین زمان ممکن',
+    titleKey: 'whyUs.speed',
+    descKey: 'whyUs.speedDesc',
   },
   {
-    title: 'امنیت تضمین شده',
-    desc: 'استفاده از پیشرفته‌ترین پروتکل‌های امنیتی',
+    titleKey: 'whyUs.security',
+    descKey: 'whyUs.securityDesc',
   },
   {
-    title: 'شفافیت کامل',
-    desc: 'کارمزدها و نرخ‌ها کاملاً شفاف اعلام می‌شود',
+    titleKey: 'whyUs.transparency',
+    descKey: 'whyUs.transparencyDesc',
   },
   {
-    title: '۱۷ سال اعتماد',
-    desc: 'سابقه درخشان و رضایت هزاران مشتری',
+    titleKey: 'whyUs.trust',
+    descKey: 'whyUs.trustDesc',
   },
 ];
 
@@ -98,30 +95,12 @@ export const testimonials = [
 
 // FAQs
 export const faqs = [
-  {
-    q: 'حداقل مبلغ برای معاملات OTC چقدر است؟',
-    a: 'برای معاملات OTC هیچ محدودیت حداقلی وجود ندارد. شما می‌توانید با هر مبلغی معامله کنید.',
-  },
-  {
-    q: 'آیا احراز هویت بایننس تضمین می‌شود؟',
-    a: 'بله، تیم متخصص ما با سال‌ها تجربه، احراز هویت شما را با موفقیت انجام می‌دهد.',
-  },
-  {
-    q: 'زمان انتقال پول بین‌المللی چقدر است؟',
-    a: 'بسته به کشور مقصد و روش انتقال، معمولاً بین ۱ تا ۳ روز کاری زمان می‌برد.',
-  },
-  {
-    q: 'آیا خدمات SWIFT برای همه کشورها موجود است؟',
-    a: 'خدمات SWIFT برای اکثر کشورها موجود است. برای اطلاعات بیشتر با ما تماس بگیرید.',
-  },
-  {
-    q: 'نحوه مشاوره سرمایه‌گذاری چگونه است؟',
-    a: 'مشاوره به صورت آنلاین و تلفنی انجام می‌شود. ابتدا نیازهای شما بررسی شده و سپس راهکار مناسب ارائه می‌گردد.',
-  },
-  {
-    q: 'آیا بیت گرند مجوز رسمی دارد؟',
-    a: 'بیت گرند با ۱۷ سال سابقه فعالیت، دارای مجوزهای لازم از مراجع ذی‌صلاح است.',
-  },
+  { qKey: 'faq.q1', aKey: 'faq.a1' },
+  { qKey: 'faq.q2', aKey: 'faq.a2' },
+  { qKey: 'faq.q3', aKey: 'faq.a3' },
+  { qKey: 'faq.q4', aKey: 'faq.a4' },
+  { qKey: 'faq.q5', aKey: 'faq.a5' },
+  { qKey: 'faq.q6', aKey: 'faq.a6' },
 ];
 
 // Social media links
